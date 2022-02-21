@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.responses import PlainTextResponse
 import uvicorn
 
 app = FastAPI()
@@ -6,7 +7,7 @@ app = FastAPI()
 
 @app.get('/')
 def index():
-    return 'Hi ;)'
+    return PlainTextResponse('Hi ;)')
 
 
 if __name__ == '__main__':
